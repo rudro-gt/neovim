@@ -116,7 +116,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim',  opts = {} },
+  { 'folke/which-key.nvim', opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -191,39 +191,8 @@ require('lazy').setup({
       end,
     },
   },
-  --[[
-  {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
-  },
---]]
-  --[[
-{
-  "craftzdog/solarized-osaka.nvim",
-  lazy = false,
-  priority = 1000,
-  opts = {},
-  config = function()
-    vim.cmd.colorscheme 'solarized-osaka'
-  end,
-},
---]]
-  {
-    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-    {
-      "baliestri/aura-theme",
-      lazy = false,
-      priority = 1000,
-      config = function(plugin)
-        vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
-        vim.cmd([[colorscheme aura-dark]])
-      end
-    }
-  },
+
+  { 'rebelot/kanagawa.nvim' },
 
   {
     -- Set lualine as statusline
@@ -668,24 +637,24 @@ cmp.setup {
         fallback()
       end
     end, { 'i', 's' }),
-   -- ['<C-j>'] = cmp.mapping(function(fallback)
-   --   if cmp.visible() then
-   --     cmp.select_next_item()
-   --   elseif luasnip.expand_or_locally_jumpable() then
-   --     luasnip.expand_or_jump()
-   --   else
-   --     fallback()
-   --   end
-   -- end, { 'i', 's' }),
-   -- ['<C-k>'] = cmp.mapping(function(fallback)
-   --   if cmp.visible() then
-   --     cmp.select_prev_item()
-   --   elseif luasnip.locally_jumpable(-1) then
-   --     luasnip.jump(-1)
-   --   else
-   --     fallback()
-   --   end
-   -- end, { 'i', 's' }),
+    -- ['<C-j>'] = cmp.mapping(function(fallback)
+    --   if cmp.visible() then
+    --     cmp.select_next_item()
+    --   elseif luasnip.expand_or_locally_jumpable() then
+    --     luasnip.expand_or_jump()
+    --   else
+    --     fallback()
+    --   end
+    -- end, { 'i', 's' }),
+    -- ['<C-k>'] = cmp.mapping(function(fallback)
+    --   if cmp.visible() then
+    --     cmp.select_prev_item()
+    --   elseif luasnip.locally_jumpable(-1) then
+    --     luasnip.jump(-1)
+    --   else
+    --     fallback()
+    --   end
+    -- end, { 'i', 's' }),
   },
   sources = {
     { name = 'nvim_lsp' },
@@ -694,6 +663,7 @@ cmp.setup {
   },
 }
 
+vim.cmd("colorscheme kanagawa")
 -- vim.cmd[[ hi Normal guibg=NONE ctermbg=NONE ]]
 -- vim.cmd[[ hi VertSplit guifg=NONE guibg=NONE ctermbg=NONE ]]
 

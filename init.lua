@@ -116,7 +116,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',     opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -192,7 +192,13 @@ require('lazy').setup({
     },
   },
 
-  { 'rebelot/kanagawa.nvim' },
+  -- { 'rebelot/kanagawa.nvim' },
+  {
+    'craftzdog/solarized-osaka.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 
   {
     -- Set lualine as statusline
@@ -231,8 +237,8 @@ require('lazy').setup({
       -- Fuzzy Finder Algorithm which requires local dependencies to be built.
       -- Only load if `make` is available. Make sure you have the system
       -- requirements installed.
-     
-{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
+
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
     },
   },
 
@@ -656,9 +662,12 @@ cmp.setup {
   },
 }
 
-vim.cmd("colorscheme kanagawa")
--- vim.cmd[[ hi Normal guibg=NONE ctermbg=NONE ]]
--- vim.cmd[[ hi VertSplit guifg=NONE guibg=NONE ctermbg=NONE ]]
+vim.cmd('colorscheme solarized-osaka')
+vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
+vim.cmd [[ hi VertSplit guifg=NONE guibg=NONE ctermbg=NONE ]]
+
+vim.opt.guifont = { "Monaspace Neon", ":h12" }
+vim.g.neovide_transparency = 0.8
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

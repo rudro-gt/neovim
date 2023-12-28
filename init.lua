@@ -192,13 +192,7 @@ require('lazy').setup({
     },
   },
 
-  -- { 'rebelot/kanagawa.nvim' },
-  {
-    'craftzdog/solarized-osaka.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
+  { 'rebelot/kanagawa.nvim' },
 
   {
     -- Set lualine as statusline
@@ -662,12 +656,12 @@ cmp.setup {
   },
 }
 
-vim.cmd('colorscheme solarized-osaka')
+vim.cmd('colorscheme kanagawa')
 vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
 vim.cmd [[ hi VertSplit guifg=NONE guibg=NONE ctermbg=NONE ]]
 
-vim.opt.guifont = { "Monaspace Neon", ":h12" }
-vim.g.neovide_transparency = 0.8
+vim.opt.guifont = { "JetBrainsMono Nerd Font", ":h11" }
+vim.g.neovide_transparency = 0.85
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

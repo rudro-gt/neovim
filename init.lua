@@ -657,8 +657,9 @@ cmp.setup {
 }
 
 vim.cmd('colorscheme kanagawa')
-vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
-vim.cmd [[ hi VertSplit guifg=NONE guibg=NONE ctermbg=NONE ]]
+vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+vim.cmd('hi VertSplit guifg=NONE guibg=NONE ctermbg=NONE')
+vim.cmd('set noshowmode')
 
 vim.opt.guifont = { "JetBrainsMono Nerd Font", ":h11" }
 vim.g.neovide_transparency = 0.85

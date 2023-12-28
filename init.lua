@@ -663,6 +663,7 @@ vim.cmd('set noshowmode')
 
 vim.opt.guifont = { "JetBrainsMono Nerd Font", ":h11" }
 vim.g.neovide_transparency = 0.85
+vim.g.neovide_cursor_trail_size = 0
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

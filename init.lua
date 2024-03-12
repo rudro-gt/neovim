@@ -193,6 +193,7 @@ require('lazy').setup({
   },
 
   { 'rebelot/kanagawa.nvim' },
+  { "EdenEast/nightfox.nvim" },
 
   {
     -- Set lualine as statusline
@@ -656,9 +657,9 @@ cmp.setup {
   },
 }
 
-vim.cmd('colorscheme kanagawa')
-vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
-vim.cmd('hi VertSplit guifg=NONE guibg=NONE ctermbg=NONE')
+vim.cmd('colorscheme carbonfox')
+-- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+-- vim.cmd('hi VertSplit guifg=NONE guibg=NONE ctermbg=NONE')
 vim.cmd('set noshowmode')
 
 vim.g.neovide_transparency = 0.85

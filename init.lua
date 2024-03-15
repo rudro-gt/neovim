@@ -21,7 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Check if running in VSCode
 if vim.fn.exists('g:vscode') == 1 then
-    -- vim.api.nvim_set_keymap('n', '<Space>', ':call VSCodeNotify("whichkey.show")<CR>', {silent=true})
+    vim.api.nvim_set_keymap('n', '<Space>', ':call VSCodeNotify("whichkey.show")<CR>', {silent=true})
 
     require('lazy').setup({
         { 'tpope/vim-surround' },

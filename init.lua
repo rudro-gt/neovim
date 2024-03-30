@@ -1,4 +1,3 @@
--- Key mapping
 vim.api.nvim_set_keymap('n', 'Y', 'y$', {})
 vim.opt.clipboard:append('unnamedplus')
 vim.opt.nrformats:append('alpha')
@@ -19,7 +18,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Check if running in VSCode
 if vim.g.vscode then
     vim.api.nvim_set_keymap('n', '<Space>', ':call VSCodeNotify("whichkey.show")<CR>', {silent=true})
 
@@ -27,14 +25,11 @@ if vim.g.vscode then
         { 'tpope/vim-surround' },
     })
 else
-    -- Key mappings in insert mode
     vim.api.nvim_set_keymap('i', '{<CR>', '{<CR>}<C-o><S-o>', {})
     vim.api.nvim_set_keymap('i', 'jj', '<Esc>', {})
 
-    -- Filetype settings
     vim.cmd('filetype plugin indent on')
 
-    -- General settings
     vim.opt.termguicolors = true
     vim.opt.number = true
     vim.opt.tabstop = 4
@@ -47,21 +42,25 @@ else
     require('lazy').setup({
         { 'EdenEast/nightfox.nvim' },
         { 'olivercederborg/poimandres.nvim' },
-        { 'vim-airline/vim-airline' },
-        { 'vim-airline/vim-airline-themes' },
+        {
+          'nvim-lualine/lualine.nvim',
+          -- See `:help lualine.txt`
+          opts = {
+            options = {
+              icons_enabled = false,
+              theme = 'onedark',
+              component_separators = { left = '', right = '' },
+              section_separators = { left = '', right = '' },
+            },
+          },
+        },
         { 'tpope/vim-surround' },
     })
 
-    -- Plugin-specific settings
-    vim.g.airline_theme = 'minimalist'
-    vim.g.airline_powerline_fonts = 1
+    vim.cmd('colorscheme poimandres')
 
-    -- Theme settings
-    vim.cmd('colorscheme carbonfox')
+    -- Auto-save on focus change (uncomment if needed)
+    -- vim.cmd('autocmd FocusLost * :wa')
+    -- Transparent background
+    -- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 end
-
--- Auto-save on focus change (uncomment if needed)
--- vim.cmd('autocmd FocusLost * :wa')
-
--- Transparent background
--- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')

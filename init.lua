@@ -27,9 +27,7 @@ if vim.g.vscode then
 else
     vim.api.nvim_set_keymap('i', '{<CR>', '{<CR>}<C-o><S-o>', {})
     vim.api.nvim_set_keymap('i', 'jj', '<Esc>', {})
-
     vim.cmd('filetype plugin indent on')
-
     vim.opt.termguicolors = true
     vim.opt.number = true
     vim.opt.tabstop = 4
@@ -57,7 +55,7 @@ else
         { 'tpope/vim-surround' },
     })
 
-    vim.cmd('colorscheme poimandres')
+    vim.cmd('colorscheme carbonfox')
 
     -- Auto-save on focus change (uncomment if needed)
     -- vim.cmd('autocmd FocusLost * :wa')

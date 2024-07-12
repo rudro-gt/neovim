@@ -39,7 +39,6 @@ else
 
     require('lazy').setup({
         { 'EdenEast/nightfox.nvim' },
-        { 'olivercederborg/poimandres.nvim' },
         {
           'nvim-lualine/lualine.nvim',
           -- See `:help lualine.txt`

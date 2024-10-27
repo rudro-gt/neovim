@@ -9,3 +9,5 @@ local opts = { noremap = true, silent = true }
 map("i", "jj", "<Esc>", opts) -- normal mode remap
 map("n", "<C-a>", "gg<S-v>G", opts) -- select all
 map("n", "K", "-J", opts) -- join with previous line
+
+-- windows and tabs

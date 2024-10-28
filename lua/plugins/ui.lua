@@ -21,4 +21,24 @@ return {
       },
     },
   },
+  {
+    "akinsho/bufferline.nvim",
+    enabled = false,
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      sections = {
+        lualine_a = { "mode" },
+        lualine_b = { "branch" },
+        lualine_c = { "buffers" },
+        lualine_x = { "diff", "diagnostics" },
+        lualine_y = { "encoding", "fileformat", "filetype" },
+        lualine_z = { "location" },
+      },
+      options = {
+        component_separators = "",
+      },
+    },
+  },
 }

@@ -4,31 +4,36 @@
 
 local map = vim.keymap.set
 local delete = vim.keymap.del
-local opts = { noremap = true, silent = true }
+local default_opts = { noremap = true, silent = true }
+local function add_desc(description) -- add description with default options
+  return {
+    noremap = default_opts.noremap,
+    silent = default_opts.silent,
+    desc = description,
+  }
+end
 
 -- Basics
-map("i", "jj", "<Esc>", opts) -- normal mode remap
-map("n", "<c-a>", "gg<S-v>G", opts) -- select all
-map("n", "K", "-J", opts) -- join with previous line
+map("i", "jj", "<Esc>", default_opts)
+map("n", "<c-a>", "gg<S-v>G", default_opts)
+map("n", "K", "-J", default_opts)
 
 -- Override terminal toggle
 delete("n", "<c-/>")
 delete("t", "<c-/>")
-map("n", "<c-`>", function() -- LazyVim.terminal() is wrapped to match expected function signature
+
+map("n", "<c-`>", function()
   LazyVim.terminal()
-end, { desc = "Terminal (Root Dir)" })
-map("t", "<c-`>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+end, add_desc("Terminal (Root Dir)"))
+map("t", "<c-`>", "<cmd>close<cr>", add_desc("Hide Terminal"))
 
 -- Tabs
-map("n", "<leader>tn", ":tabnew|Telescope find_files<Return>", opts)
-map("n", "<leader>tq", ":tabclose<Return>", opts)
-map("n", "<leader>tQ", ":tabonly<Return>", opts)
+map("n", "<leader>tn", ":tabnew|Telescope find_files<Return>", add_desc("Create New Tab"))
+map("n", "<leader>tq", ":tabclose<Return>", add_desc("Close Current Tab"))
+map("n", "<leader>tQ", ":tabonly<Return>", add_desc("Close All Tabs"))
 
-map("n", "<tab>", ":tabnext<Return>", opts)
-map("n", "<s-tab>", ":tabprev<Return>", opts)
-
+map("n", "<tab>", ":tabnext<Return>", add_desc("Next Tab"))
+map("n", "<s-tab>", ":tabprev<Return>", add_desc("Prev Tab"))
 -- Buffers
-map("n", "<leader>bD", ":%bd<Return>", { desc = "Delete All Buffers" })
-map("n", "<leader>bo", ":%bd|e#|bd#<Return>", { desc = "Delete Other Buffers" })
-
---  TODO  Add descriptions to the remaps
+map("n", "<leader>bD", ":%bd<Return>", add_desc("Delete All Buffers"))
+map("n", "<leader>bo", ":%bd|e#|bd#<Return>", add_desc("Delete Other Buffers"))

@@ -14,3 +14,5 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
     vim.notify("Macro recorded into register " .. vim.fn.reg_recording(), "info")
   end,
 })
+
+--  TODO  Add Autocmds for showing whitespace on selection

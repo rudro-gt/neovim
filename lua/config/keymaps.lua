@@ -15,7 +15,6 @@ end
 
 -- Basics
 map("i", "jj", "<Esc>", default_opts)
-map("n", "<c-a>", "gg<S-v>G", default_opts)
 map("n", "K", "-J", default_opts)
 
 -- Override terminal toggle
@@ -34,6 +33,7 @@ map("n", "<leader>tQ", ":tabonly<Return>", add_desc("Close All Tabs"))
 
 map("n", "<tab>", ":tabnext<Return>", add_desc("Next Tab"))
 map("n", "<s-tab>", ":tabprev<Return>", add_desc("Prev Tab"))
+
 -- Buffers
 map("n", "<leader>bD", ":%bd<Return>", add_desc("Delete All Buffers"))
 map("n", "<leader>bo", ":%bd|e#|bd#<Return>", add_desc("Delete Other Buffers"))

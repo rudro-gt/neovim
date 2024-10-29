@@ -16,6 +16,7 @@ end
 -- Basics
 map("i", "jj", "<Esc>", default_opts)
 map("n", "K", "-J", default_opts)
+map("n", "<leader><leader>", "<c-6>", add_desc("Alternate between last 2 buffers"))
 
 -- Override terminal toggle
 delete("n", "<c-/>")
@@ -27,9 +28,13 @@ end, add_desc("Terminal (Root Dir)"))
 map("t", "<c-`>", "<cmd>close<cr>", add_desc("Hide Terminal"))
 
 -- Tabs
-map("n", "<leader>tn", ":tabnew|Telescope find_files<Return>", add_desc("Create New Tab"))
-map("n", "<leader>tq", ":tabclose<Return>", add_desc("Close Current Tab"))
-map("n", "<leader>tQ", ":tabonly<Return>", add_desc("Close All Tabs"))
+delete("n", "<leader><tab>[")
+delete("n", "<leader><tab>]")
+delete("n", "<leader><tab>d")
+
+map("n", "<leader><tab><tab>", ":tabnew|Telescope find_files<Return>", add_desc("Create New Tab"))
+map("n", "<leader><tab>q", ":tabclose<Return>", add_desc("Close Current Tab"))
+map("n", "<leader><tab>Q", ":tabonly<Return>", add_desc("Close All Tabs"))
 
 map("n", "<tab>", ":tabnext<Return>", add_desc("Next Tab"))
 map("n", "<s-tab>", ":tabprev<Return>", add_desc("Prev Tab"))

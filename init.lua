@@ -1,6 +1,5 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("bootstrap")
-
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins

@@ -1,15 +1,16 @@
 -- Autocmds are automatically loaded on the VeryLazy event
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
+local autocmd = vim.api.nvim_create_autocmd
 
 -- notifying when recording a macro
-vim.api.nvim_create_autocmd("RecordingEnter", {
+autocmd("RecordingEnter", {
   callback = function()
     vim.notify("Macro recording started at register " .. vim.fn.reg_recording(), "info")
   end,
 })
 
-vim.api.nvim_create_autocmd("RecordingLeave", {
+autocmd("RecordingLeave", {
   callback = function()
     vim.notify("Macro recorded into register " .. vim.fn.reg_recording(), "info")
   end,

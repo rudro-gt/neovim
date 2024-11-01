@@ -1,10 +1,8 @@
+-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
 return {
+  { "navarasu/onedark.nvim", opts = { style = "darker" } },
   {
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    "EdenEast/nightfox.nvim",
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = { colorscheme = "carbonfox" },
+    "lazyvim/lazyVim",
+    opts = { colorscheme = "onedark" },
   },
 }

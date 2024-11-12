@@ -6,13 +6,27 @@ return {
   {
     "echasnovski/mini.files",
     opts = {
+      -- Module mappings created only inside explorer.
+      -- Use `''` (empty string) to not create one.
+      mappings = {
+        close = "q",
+        go_in = "L",
+        go_in_plus = "<Enter>",
+        go_out = "H",
+        go_out_plus = "<BS>",
+        mark_goto = "'",
+        mark_set = "m",
+        reset = "",
+        reveal_cwd = "@",
+        show_help = "g?",
+        synchronize = "=",
+        trim_left = "<",
+        trim_right = ">",
+      },
       windows = {
         preview = true,
         width_focus = 30,
         width_preview = 30,
-      },
-      options = {
-        use_as_default_explorer = true,
       },
     },
     keys = {

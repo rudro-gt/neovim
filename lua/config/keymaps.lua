@@ -26,6 +26,9 @@ map("n", "<c-]>", "<c-i>", default_opts)
 delete("t", "<c-/>")
 map("t", "<c-`>", "<cmd>close<cr>", add_desc("Hide Terminal"))
 
+-- Windows
+delete("n", "<leader>wd") -- q for quitting views (i.e tabs and windows), d for deleting buffers
+
 -- Tabs
 delete("n", "<leader><tab>[")
 delete("n", "<leader><tab>]")

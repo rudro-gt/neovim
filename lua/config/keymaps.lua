@@ -22,13 +22,8 @@ map("n", "<leader><leader>", "<c-6>", add_desc("Alternate between last 2 buffers
 map("n", "<c-[>", "<c-o>", default_opts)
 map("n", "<c-]>", "<c-i>", default_opts)
 
--- Override terminal toggle
-delete("n", "<c-/>")
+-- Terminal
 delete("t", "<c-/>")
-
-map("n", "<c-`>", function()
-  LazyVim.terminal()
-end, add_desc("Terminal (Root Dir)"))
 map("t", "<c-`>", "<cmd>close<cr>", add_desc("Hide Terminal"))
 
 -- Tabs

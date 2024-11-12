@@ -4,6 +4,15 @@ return {
     "folke/flash.nvim",
     keys = {
       { "S", mode = { "n", "x", "o" }, false }, -- this was conflicting with vim-surround
+      { "s", mode = { "n", "x", "o" }, false },
+      {
+        "<c-/>",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump()
+        end,
+        desc = "Flash",
+      },
     },
   },
   {

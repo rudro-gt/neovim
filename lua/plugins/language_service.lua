@@ -25,4 +25,7 @@ return {
 
   -- Debug Adapter Protocol
   { import = "lazyvim.plugins.extras.dap.core" },
+
+  -- Codeium
+  { import = "lazyvim.plugins.extras.ai.codeium" },
 }

@@ -1,5 +1,7 @@
 return {
   { "tpope/vim-surround" },
+  { "tpope/vim-repeat" },
+  { "tpope/vim-speeddating" },
   {
     "folke/flash.nvim",
     keys = {
@@ -43,7 +45,6 @@ return {
       end,
       dependencies = {
         "nvim-treesitter/nvim-treesitter",
-        "hrsh7th/nvim-cmp",
       },
       opt = true, -- Set this to true if the plugin is optional
       event = "InsertCharPre", -- Set the event to 'InsertCharPre' for better compatibility

@@ -11,7 +11,7 @@ return {
     ---@module "auto-session"
     ---@type AutoSession.Config
     opts = {
-      suppressed_dirs = { "~/", "~/Dev", "~/Downloads", "/" },
+      suppressed_dirs = { "~/", "~/Dev", "~/Downloads", "/tmp/*" },
       -- log_level = 'debug',
     },
     init = function()

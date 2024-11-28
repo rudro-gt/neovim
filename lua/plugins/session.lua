@@ -11,8 +11,7 @@ return {
     ---@module "auto-session"
     ---@type AutoSession.Config
     opts = {
-      suppressed_dirs = { "~/", "~/Dev", "~/Downloads", "/tmp/*" },
-      -- log_level = 'debug',
+      suppressed_dirs = { "~/", "~/Dev", "~/Downloads", "/tmp/*", vim.fn.stdpath("data") .. "/lazy/*" },
     },
     init = function()
       vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

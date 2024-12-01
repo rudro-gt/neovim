@@ -1,7 +1,7 @@
 return {
-  { "tpope/vim-surround" },
-  { "tpope/vim-repeat" },
-  { "tpope/vim-speeddating" },
+  { "tpope/vim-surround", event = "VeryLazy" },
+  { "tpope/vim-repeat", event = "VeryLazy" },
+  { "tpope/vim-speeddating", event = "VeryLazy" },
   {
     "folke/flash.nvim",
     keys = {
@@ -20,7 +20,6 @@ return {
   {
     {
       "abecodes/tabout.nvim",
-      lazy = false,
       config = function()
         require("tabout").setup({
           tabkey = "<Tab>", -- key to trigger tabout, set to an empty string to disable
@@ -48,7 +47,6 @@ return {
       },
       opt = true, -- Set this to true if the plugin is optional
       event = "InsertCharPre", -- Set the event to 'InsertCharPre' for better compatibility
-      priority = 1000,
     },
   },
 }

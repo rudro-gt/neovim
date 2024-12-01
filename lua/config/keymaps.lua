@@ -28,6 +28,14 @@ map("t", "<c-`>", "<cmd>close<cr>", add_desc("Hide Terminal"))
 
 -- Windows
 delete("n", "<leader>wd") -- q for quitting views (i.e tabs and windows), d for deleting buffers
+map("n", "<C-h>", require("smart-splits").move_cursor_left)
+map("n", "<C-j>", require("smart-splits").move_cursor_down)
+map("n", "<C-k>", require("smart-splits").move_cursor_up)
+map("n", "<C-l>", require("smart-splits").move_cursor_right)
+map("n", "<A-h>", require("smart-splits").resize_left)
+map("n", "<A-j>", require("smart-splits").resize_down)
+map("n", "<A-k>", require("smart-splits").resize_up)
+map("n", "<A-l>", require("smart-splits").resize_right)
 
 -- Tabs
 delete("n", "<leader><tab>[")

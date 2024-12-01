@@ -7,7 +7,6 @@ return {
       -- override hover keymap
       keys[#keys + 1] = { "K", false }
       keys[#keys + 1] = { "gh", vim.lsp.buf.hover, desc = "Hover" }
-      keys[#keys + 1] = { "gt", vim.lsp.buf.type_definition, desc = "Goto T[y]pe Definition" }
     end,
   },
 

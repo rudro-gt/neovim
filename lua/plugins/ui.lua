@@ -1,5 +1,12 @@
 return {
   {
+    "folke/snacks.nvim",
+    opts = {
+      terminal = { enabled = false },
+      dashboard = { enabled = false },
+    },
+  },
+  {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {

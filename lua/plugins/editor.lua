@@ -49,4 +49,24 @@ return {
       event = "InsertCharPre", -- Set the event to 'InsertCharPre' for better compatibility
     },
   },
+  {
+    "epwalsh/obsidian.nvim",
+    version = "*", -- recommended, use latest release instead of latest commit
+    lazy = true,
+    event = {
+      -- Only enable plugin for vaults in the Documents directory
+      "BufReadPre "
+        .. vim.fn.expand("~")
+        .. "/Documents/**/*.md",
+    },
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      workspaces = {
+        {
+          name = "backend-with-go",
+          path = vim.fn.expand("~") .. "/Documents/backend-with-go/",
+        },
+      },
+    },
+  },
 }

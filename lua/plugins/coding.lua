@@ -1,5 +1,5 @@
 return {
-  -- LSP keymap Overrides
+  -- LSP, Linters etc.
   {
     "neovim/nvim-lspconfig",
     init = function()
@@ -12,14 +12,9 @@ return {
       inlay_hints = { enabled = false },
     },
   },
-
-  -- LSP, Linters etc.
   { import = "lazyvim.plugins.extras.lang.docker" },
-
   { import = "lazyvim.plugins.extras.lang.go" },
-
   { import = "lazyvim.plugins.extras.lang.python" },
-
   { import = "lazyvim.plugins.extras.lang.astro" },
   { import = "lazyvim.plugins.extras.linting.eslint" },
   { import = "lazyvim.plugins.extras.lang.json" },
@@ -28,4 +23,18 @@ return {
 
   -- Debug Adapter Protocol
   { import = "lazyvim.plugins.extras.dap.core" },
+
+  -- Testing
+  { import = "lazyvim.plugins.extras.test.core" },
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "fredrikaverpil/neotest-golang",
+      "marilari88/neotest-vitest",
+    },
+    opts = function(_, opts)
+      table.insert(opts.adapters, require("neotest-golang"))
+      table.insert(opts.adapters, require("neotest-vitest"))
+    end,
+  },
 }

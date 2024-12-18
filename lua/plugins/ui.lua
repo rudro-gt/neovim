@@ -47,4 +47,24 @@ return {
       },
     },
   },
+  {
+    "folke/noice.nvim",
+    opts = {
+      lsp = {
+        hover = {
+          silent = true,
+        },
+      },
+      presets = {
+        lsp_doc_border = true,
+      },
+      views = {
+        hover = {
+          border = {
+            padding = { 0, 0 },
+          },
+        },
+      },
+    },
+  },
 }

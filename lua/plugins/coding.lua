@@ -6,10 +6,14 @@ return {
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
       -- override hover keymap
       keys[#keys + 1] = { "K", false }
-      keys[#keys + 1] = { "gh", vim.lsp.buf.hover, desc = "Hover" }
     end,
     opts = {
       inlay_hints = { enabled = false },
+      diagnostics = {
+        float = {
+          border = "rounded",
+        },
+      },
     },
   },
   { import = "lazyvim.plugins.extras.lang.docker" },

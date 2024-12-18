@@ -52,3 +52,9 @@ map("n", "<s-tab>", ":tabprev<Return>", add_desc("Prev Tab"))
 -- Buffers
 map("n", "<leader>bD", ":%bd<Return>", add_desc("Delete All Buffers"))
 map("n", "<leader>bo", ":%bd|e#|bd#<Return>", add_desc("Delete Other Buffers"))
+
+-- LSP
+map("n", "gh", function()
+  return vim.lsp.buf.hover()
+end, add_desc("Display hover info"))
+map("n", "gl", vim.diagnostic.open_float, add_desc("Line diagnostics"))

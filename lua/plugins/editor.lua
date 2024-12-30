@@ -50,26 +50,6 @@ return {
     },
   },
   {
-    "epwalsh/obsidian.nvim",
-    version = "*", -- recommended, use latest release instead of latest commit
-    lazy = true,
-    event = {
-      -- Only enable plugin for vaults in the Documents directory
-      "BufReadPre "
-        .. vim.fn.expand("~")
-        .. "/Documents/**/*.md",
-    },
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-      workspaces = {
-        {
-          name = "backend-with-go",
-          path = vim.fn.expand("~") .. "/Documents/backend-with-go/",
-        },
-      },
-    },
-  },
-  {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     build = "cd app && yarn install",

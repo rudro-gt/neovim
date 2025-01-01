@@ -7,14 +7,6 @@ return {
       -- override hover keymap
       keys[#keys + 1] = { "K", false }
     end,
-    opts = {
-      inlay_hints = { enabled = false },
-      diagnostics = {
-        float = {
-          border = "rounded",
-        },
-      },
-    },
   },
   { import = "lazyvim.plugins.extras.lang.docker" },
   { import = "lazyvim.plugins.extras.lang.go" },

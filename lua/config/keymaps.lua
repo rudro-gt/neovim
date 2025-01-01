@@ -42,7 +42,7 @@ delete("n", "<leader><tab>[")
 delete("n", "<leader><tab>]")
 delete("n", "<leader><tab>d")
 
-map("n", "<leader><tab><tab>", ":tabnew|Telescope find_files<Return>", add_desc("Create New Tab"))
+map("n", "<leader><tab><tab>", ":tabnew|FzfLua files<Return>", add_desc("Create New Tab"))
 map("n", "<leader><tab>q", ":tabclose<Return>", add_desc("Close Current Tab"))
 map("n", "<leader><tab>Q", ":tabonly<Return>", add_desc("Close All Tabs"))
 

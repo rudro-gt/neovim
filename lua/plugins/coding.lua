@@ -18,6 +18,16 @@ return {
   { import = "lazyvim.plugins.extras.lang.typescript" },
   { import = "lazyvim.plugins.extras.formatting.prettier" },
   { import = "lazyvim.plugins.extras.lang.svelte" },
+  {
+    "norcalli/nvim-colorizer.lua",
+    opts = {
+      "css",
+      "javascript",
+      html = {
+        mode = "foreground",
+      },
+    },
+  },
 
   -- Debug Adapter Protocol
   { import = "lazyvim.plugins.extras.dap.core" },

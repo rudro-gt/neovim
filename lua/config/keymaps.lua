@@ -17,14 +17,11 @@ end
 map("i", "jj", "<Esc>", default_opts)
 map("n", "K", "-J", default_opts)
 map("n", "<leader><leader>", "<c-6>", add_desc("Alternate between last 2 buffers"))
+map("n", "<leader>n", ":noh<Return>", add_desc("Remove highlights"))
 
 -- Jump remap (<c-i> conflicting with <Tab>)
 map("n", "<c-[>", "<c-o>", default_opts)
 map("n", "<c-]>", "<c-i>", default_opts)
-
--- Terminal
-delete("t", "<c-/>")
-map("t", "<c-`>", "<cmd>close<cr>", add_desc("Hide Terminal"))
 
 -- Windows
 delete("n", "<leader>wd") -- q for quitting views (i.e tabs and windows), d for deleting buffers

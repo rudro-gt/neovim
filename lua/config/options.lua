@@ -8,3 +8,4 @@ vim.opt.nrformats:append("alpha") --[[ This defines what bases Vim will consider
                                        CTRL-A and CTRL-X commands for adding to and subtracting from a number
                                        respectively ]]
 vim.opt.showtabline = 0
+vim.opt.relativenumber = false

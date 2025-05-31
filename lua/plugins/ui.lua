@@ -36,8 +36,8 @@ return {
     opts = {
       sections = {
         lualine_a = { "mode" },
-        lualine_b = { "branch", "tabs" },
-        lualine_c = { "buffers" },
+        lualine_b = { "branch" },
+        lualine_c = { "tabs", "buffers" },
         lualine_x = { "diff", "diagnostics" },
         lualine_y = { "encoding", "fileformat", "filetype" },
         lualine_z = { "location" },

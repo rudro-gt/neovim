@@ -55,3 +55,6 @@ map("n", "gh", function()
   return vim.lsp.buf.hover()
 end, add_desc("Display hover info"))
 map("n", "gl", vim.diagnostic.open_float, add_desc("Line diagnostics"))
+
+-- Undotree
+map("n", "U", vim.cmd.UndotreeToggle, add_desc("Toggle Undotree"))

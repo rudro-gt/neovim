@@ -3,21 +3,6 @@ return {
   { "tpope/vim-repeat", event = "VeryLazy" },
   { "tpope/vim-speeddating", event = "VeryLazy" },
   {
-    "folke/flash.nvim",
-    keys = {
-      { "S", mode = { "n", "x", "o" }, false }, -- this was conflicting with vim-surround
-      { "s", mode = { "n", "x", "o" }, false },
-      {
-        "<c-/>",
-        mode = { "n", "x", "o" },
-        function()
-          require("flash").jump()
-        end,
-        desc = "Flash",
-      },
-    },
-  },
-  {
     "kawre/neotab.nvim",
     event = "InsertEnter",
     opts = {

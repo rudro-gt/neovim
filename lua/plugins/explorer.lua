@@ -4,7 +4,7 @@ return {
     enabled = false,
   },
   {
-    "echasnovski/mini.files",
+    "nvim-mini/mini.files",
     opts = {
       -- Module mappings created only inside explorer.
       -- Use `''` (empty string) to not create one.

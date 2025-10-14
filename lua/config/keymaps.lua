@@ -19,9 +19,9 @@ map("n", "K", "-J", default_opts)
 map("n", "<leader><leader>", "<c-6>", add_desc("Alternate between last 2 buffers"))
 map("n", "<leader>n", ":noh<Return>", add_desc("Remove highlights"))
 
--- Jump remap (<c-i> conflicting with <Tab>)
-map("n", "<c-[>", "<c-o>", default_opts)
-map("n", "<c-]>", "<c-i>", default_opts)
+-- Navigation wihin a buffer
+map("n", "<leader>[", "<cmd>Portal jumplist backward<cr>")
+map("n", "<leader>]", "<cmd>Portal jumplist forward<cr>")
 
 -- Windows
 delete("n", "<leader>wd") -- q for quitting views (i.e tabs and windows), d for deleting buffers

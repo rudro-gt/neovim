@@ -7,6 +7,5 @@ return {
     },
   },
   { "mrjones2014/smart-splits.nvim" },
+  { "cbochs/portal.nvim" },
 }
-
---  TODO  Try out Harpoon

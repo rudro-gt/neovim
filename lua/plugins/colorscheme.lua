@@ -11,13 +11,7 @@ return {
     },
   },
   {
-    "vague-theme/vague.nvim",
-    opts = {
-      transparent = true,
-    },
-  },
-  {
     "lazyvim/lazyVim",
-    opts = { colorscheme = "vague" },
+    opts = { colorscheme = "onedark" },
   },
 }

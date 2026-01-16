@@ -44,4 +44,16 @@ return {
     "mbbill/undotree",
     event = "VeryLazy",
   },
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {},
+    keys = {
+      {
+        "S",
+        mode = { "n", "x", "o" },
+        enabled = false,
+      },
+    },
+  },
 }
